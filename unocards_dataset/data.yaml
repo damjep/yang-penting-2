@@ -1,7 +1,7 @@
 train: ../images/train
 val: ../images/val
 
-nc: 51  # number of classes (this now matches the names list)
+nc: 52 
 
 names: 
   - yellow-0
