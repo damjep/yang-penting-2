@@ -1,0 +1,59 @@
+train: ../images/train
+val: ../images/val
+
+nc: 51  # number of classes (this now matches the names list)
+
+names: 
+  - yellow-0
+  - red-0
+  - green-0
+  - blue-0
+  - green-1
+  - blue-1
+  - red-1
+  - yellow-1
+  - yellow-2
+  - green-2
+  - blue-2
+  - red-2
+  - green-3
+  - blue-3
+  - red-3
+  - yellow-3
+  - green- 4
+  - blue - 4
+  - red - 4
+  - yellow-4
+  - yelow-5
+  - red-5
+  - green-5
+  - blue-5
+  - blue-6
+  - red-6
+  - yellow-6
+  - green-7
+  - blue-7
+  - yellow-7
+  - green-8
+  - blue-8
+  - yellow-8
+  - red-8
+  - green-9
+  - blue-9
+  - red-9
+  - yellow-9
+  - yellowplus-2
+  - redplus-2
+  - blueplus-2
+  - greenplus-2
+  - blackplus-4
+  - swaphands-0
+  - wildcard-0
+  - reversered-0
+  - reverseyellow-0
+  - bluereverse-0
+  - greenreverse-0
+  - blueskip-0
+  - greenskip-0
+  - redskip-0
+ 
