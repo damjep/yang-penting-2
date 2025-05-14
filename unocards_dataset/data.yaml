@@ -4,56 +4,57 @@ val: ../images/val
 nc: 51  # number of classes (this now matches the names list)
 
 names: 
-  - yellow-0
-  - red-0
-  - green-0
-  - blue-0
-  - green-1
-  - blue-1
-  - red-1
-  - yellow-1
-  - yellow-2
-  - green-2
-  - blue-2
-  - red-2
-  - green-3
-  - blue-3
-  - red-3
-  - yellow-3
-  - green- 4
-  - blue - 4
-  - red - 4
-  - yellow-4
-  - yelow-5
-  - red-5
-  - green-5
-  - blue-5
-  - blue-6
-  - red-6
-  - yellow-6
-  - green-7
-  - blue-7
-  - yellow-7
-  - green-8
-  - blue-8
-  - yellow-8
-  - red-8
-  - green-9
-  - blue-9
-  - red-9
-  - yellow-9
-  - yellowplus-2
-  - redplus-2
-  - blueplus-2
-  - greenplus-2
-  - blackplus-4
-  - swaphands-0
-  - wildcard-0
-  - reversered-0
-  - reverseyellow-0
-  - bluereverse-0
-  - greenreverse-0
-  - blueskip-0
-  - greenskip-0
-  - redskip-0
+  0: yellow 0
+  1: red 0
+  2: green 0
+  3: blue 0
+  4: green 1
+  5: blue 1
+  6: red 1
+  7: yellow 1
+  8: yellow 2
+  9: green 2
+  10: blue 2
+  11: red 2
+  12: green 3
+  13: blue 3
+  14: red 3
+  15: yellow 3
+  16: green 4
+  17: blue 4
+  18: red 4
+  19: yellow 4
+  20: yellow 5
+  21: red 5
+  22: green 5
+  23: blue 5
+  24: blue 6
+  25: red 6
+  26: yellow 6
+  27: green 7
+  28: blue 7
+  29: yellow 7
+  30: green 8
+  31: blue 8
+  32: yellow 8
+  33: red 8
+  34: green 9
+  35: blue 9
+  36: red 9
+  37: yellow 9
+  38: yellow plus 2
+  39: red plus 2
+  40: blue plus 2
+  41: green plus 2
+  42: black plus 4
+  43: swap hands 0
+  44: wild card 0
+  45: reverse red 0
+  46: reverse yellow 0
+  47: reverse blue 0
+  48: reverse green 0
+  49: skip blue 0
+  50: skip green 0
+  51: skip red 0
+
  
