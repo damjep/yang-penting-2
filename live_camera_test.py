@@ -4,30 +4,49 @@ from pathlib import Path  # For cross-platform path handling
 
 # Define the path to the trained model weights
 # Using Path ensures cross-platform compatibility (Windows/Linux/Mac)
-model_path = Path("uno_train1") / "train22" / "weights" / "best.pt"
+model_path = Path("uno_train3") / "train" / "weights" / "best.pt"
 model = YOLO(str(model_path))  # Load the YOLO model with trained weights
 
 # Dictionary mapping internal model class names to human-readable display names
 name_mapping = {
-    # Blue cards
-    "blue-0": "blue 0", "blue-1": "blue 1", "blue-2": "blue 2", "blue-20": "blue Draw two", "blue-3": "blue 3",
-    "blue-4": "blue 4", "blue-5": "blue 5", "blue-6": "blue 6", "blue-7": "blue 7", "blue-8": "blue 8", 
-    "blue-9": "blue 9", "bluereverse-20": "blue reverse", "blueskip-20": "blue skip",
-    # Special cards
-    "color-40": "Wild", "color-400": "Wild draw 4",
-    # Green cards
-    "green-0": "green 0", "green-1": "green 1", "green-2": "green 2", "green-20": "green Draw two", "green-3": "green 3",
-    "green-4": "green 4", "green-5": "green 5", "green-6": "green 6", "green-7": "green 7", "green-8": "green 8", 
-    "green-9": "green 9", "greenreverse-20": "green reverse", "greenskip-20": "green skip",
-    # Red cards
-    "red-0": "red 0", "red-1": "red 1", "red-2": "red 2", "red-20": "red Draw two", "red-3": "red 3", "red-4": "red 4",
-    "red-5": "red 5", "red-6": "red 6", "red-7": "red 7", "red-8": "red 8", "red-9": "red 9", "redreverse-20": "red reverse",
-    "redskip-20": "red skip", 
-    # Yellow cards
-    "yellow-0": "yellow 0", "yellow-1": "yellow 1", "yellow-2": "yellow 2", "yellow-20": "yellow Draw two", "yellow-3": "yellow 3",
-    "yellow-4": "yellow 4", "yellow-5": "yellow 5", "yellow-6": "yellow 6", "yellow-7": "yellow 7", "yellow-8": "yellow 8", 
-    "yellow-9": "yellow 9", "yellowreverse-20": "yellow reverse", "yellowskip-20": "yellow skip",
+    # Light Blue cards
+    'lblue-1': 'light blue 1', 'lblue-2': 'light blue 2', 'lblue-3': 'light blue 3',
+    'lblue-4': 'light blue 4', 'lblue-5': 'light blue 5', 'lblue-6': 'light blue 6',
+    'lblue-7': 'light blue 7', 'lblue-8': 'light blue 8', 'lblue-9': 'light blue 9',
+    'lblue-10': 'light blue 0',  # Assuming '10' represents 0 in some datasets
+    'lblueflip-20': 'light blue Flip', 'lbluerevers-20': 'light blue Reverse',
+    'lblueskip-20': 'light blue Skip',
+
+    # Light Green cards
+    'lgreen-1': 'light green 1', 'lgreen-2': 'light green 2', 'lgreen-3': 'light green 3',
+    'lgreen-4': 'light green 4', 'lgreen-5': 'light green 5', 'lgreen-6': 'light green 6',
+    'lgreen-7': 'light green 7', 'lgreen-8': 'light green 8', 'lgreen-9': 'light green 9',
+    'lgreen-10': 'light green 0',
+    'lgreenflip-20': 'light green Flip', 'lgreenrevers-20': 'light green Reverse',
+    'lgreenskip-20': 'light green Skip',
+
+    # Light Red cards
+    'lred-1': 'light red 1', 'lred-2': 'light red 2', 'lred-3': 'light red 3',
+    'lred-4': 'light red 4', 'lred-5': 'light red 5', 'lred-6': 'light red 6',
+    'lred-7': 'light red 7', 'lred-8': 'light red 8', 'lred-9': 'light red 9',
+    'lred-10': 'light red 0',
+    'lredflip-20': 'light red Flip', 'lredrevers-20': 'light red Reverse',
+    'lredskip-20': 'light red Skip',
+
+    # Light Yellow cards
+    'lyellow-1': 'light yellow 1', 'lyellow-2': 'light yellow 2', 'lyellow-3': 'light yellow 3',
+    'lyellow-4': 'light yellow 4', 'lyellow-5': 'light yellow 5', 'lyellow-6': 'light yellow 6',
+    'lyellow-7': 'light yellow 7', 'lyellow-8': 'light yellow 8', 'lyellow-9': 'light yellow 9',
+    'lyellow-10': 'light yellow 0',
+    'lyellowflip-20': 'light yellow Flip', 'lyellowrevers-20': 'light yellow Reverse',
+    'lyellowskip-20': 'light yellow Skip',
+
+    # Special
+    'lcolor-40': 'Wild',
+    'lcolor2-50': 'Wild Draw Four',
 }
+
+
 
 # Initialize video capture from the default camera (index 0)
 cap = cv2.VideoCapture(0)
@@ -73,7 +92,7 @@ while True:
             cv2.putText(frame, label, (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
     # Show the processed frame with detections
-    cv2.imshow("YOLO Inference", frame)
+    cv2.imshow("UNO Card Detector", frame)
 
     # Check for 'q' key press to quit
     if cv2.waitKey(1) & 0xFF == ord('q'):
